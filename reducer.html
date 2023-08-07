@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let mydata= [1,1,1,1,22,22,33];
+
+       
+
+       
+
+       let display = mydata.reduce(function(pre,value) {
+
+        
+        console.log(`pre ${pre} value : ${value}`);
+        if(pre.includes(value)== false)
+        {
+            pre.push(value);
+        }
+
+        return pre;
+       
+
+        },[]);
+
+        console.log(display);
+
+    </script>
+    
+</body>
+</html>
