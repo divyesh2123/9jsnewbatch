@@ -18,7 +18,7 @@
         </form>
         <!-- categories -->
         <h5>Company</h5>
-        <article class="companies">
+        <article class="companies" id="com">
           <button class="company-btn">all</button>
           <button class="company-btn">ikea</button>
           <button class="company-btn">marcos</button>
@@ -27,6 +27,30 @@
       <!-- products -->
       <div class="products-container" id="product">
         <!-- single product -->
+
+        <article class="product">
+    <img
+      src="${value.image}"
+      class="product-img img"
+      alt=""
+    />
+    <footer>
+      <h5 class="product-name">${value.title}</h5>
+      <span class="product-price">${value.price}</span>
+    </footer>
+  </article>
+
+  <article class="product">
+    <img
+      src="${value.image}"
+      class="product-img img"
+      alt=""
+    />
+    <footer>
+      <h5 class="product-name">${value.title}</h5>
+      <span class="product-price">${value.price}</span>
+    </footer>
+  </article>
      
       </div>
     </section>

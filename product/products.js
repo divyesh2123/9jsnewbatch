@@ -97,12 +97,15 @@ const products = [
   },
 ];
 
-function display(d)
+
+
+
+function display()
 {
 
-  let t = d.map(function(value,index) {
+  let mydisplay = products.map(function(value) {
 
-    return (`   <article class="product">
+    return `<article class="product">
     <img
       src="${value.image}"
       class="product-img img"
@@ -112,15 +115,37 @@ function display(d)
       <h5 class="product-name">${value.title}</h5>
       <span class="product-price">${value.price}</span>
     </footer>
-  </article>`)
-
+  </article>`
 
   })
 
-
-  document.getElementById("product").innerHTML = t.join(" ");
+  document.getElementById("product").innerHTML = mydisplay.
+  join(" ");
 
 
 }
 
-display(products);
+let uniqvalues = products.reduce(function(pre,value) {
+
+  if(pre.includes(value.company) == false)
+  {
+    pre.push(value.company);
+  }
+
+  return pre;
+
+},[])
+
+
+console.log(uniqvalues);
+
+
+let buttons = uniqvalues.map(function(value) {
+
+  return `<button class="company-btn">${value}</button>`
+
+})
+
+document.getElementById("com").innerHTML = buttons.join(" ");
+
+display();
