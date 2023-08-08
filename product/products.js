@@ -100,10 +100,10 @@ const products = [
 
 
 
-function display()
+function display(d)
 {
 
-  let mydisplay = products.map(function(value) {
+  let mydisplay = d.map(function(value) {
 
     return `<article class="product">
     <img
@@ -142,10 +142,30 @@ console.log(uniqvalues);
 
 let buttons = uniqvalues.map(function(value) {
 
-  return `<button class="company-btn">${value}</button>`
+  return `<button class="company-btn" onclick="filtedata('${value}')">${value}</button>`
 
 })
 
+function filtedata(companname)
+{
+  //need to write filter logic based on company name
+
+  //display data call display function
+
+
+function filterBasedOnTitle()
+{
+  let title = document.getElementById("searchTerm").value;
+
+  let filterData1 = products.filter(function(value) {
+
+    return value.title.toLowerCase() ==title.toLowerCase();
+
+  });
+
+  display(filterData1)
+
+}
 document.getElementById("com").innerHTML = buttons.join(" ");
 
-display();
+display(products);
