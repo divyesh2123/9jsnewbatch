@@ -29,7 +29,8 @@ function display()
     let d =todoitems.map(function(value,index) {
 
         return `<div>${value} <button
-             onclick="deleteItem(${index})">Delete</button></div>`
+             onclick="deleteItem(${index})">Delete</button>
+             </div>`
     });
 
     document.getElementById("display").innerHTML = d.join("")
