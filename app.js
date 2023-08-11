@@ -137,5 +137,26 @@ function displayMenu(mydata)
 }
 
 
+function lowprice(type)
+{
+  menu.sort(function(a,b) {
+
+    if(type=="asc")
+    {
+    return a.price-b.price;
+
+    }
+    else
+    {
+      return b.price-a.price;
+
+    }
+
+  })
+
+  displayMenu(menu);
+}
+
+
 
 document.getElementById("btn").innerHTML = newbutton.join(" ");
